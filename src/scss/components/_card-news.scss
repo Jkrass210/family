@@ -1,0 +1,198 @@
+.card-news {
+  display: flex;
+  position: relative;
+  min-height: 296px;
+  border-radius: 12px;
+  background-color: var(--set2-g100, #F6F8FA);
+  border: 2px solid var(--set2-g200, #EDF0F2);
+  transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+
+  &__link {
+    border-radius: 12px;
+    overflow: hidden;
+    position: absolute;
+    inset: -2px;
+    z-index: 2;
+    display: flex;
+
+    picture {
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        transition: background 0.4s ease-in-out;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      object-fit: cover;
+      transition: opacity 0.4s ease-in-out;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+  }
+
+  &__info {
+    padding: 32px;
+    position: relative;
+    z-index: 3;
+    pointer-events: none;
+    height: auto;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  &__title {
+    color: var(--set2-black, #3C4531);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 2.4em;
+    line-height: 1.2em;
+    transition: color 0.4s ease-in-out;
+  }
+
+  &__desc {
+    color: var(--set2-black, #3C4531);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 5.2em;
+    line-height: 1.3em;
+    transition: color 0.4s ease-in-out;
+  }
+
+  &__group-tags {
+    display: flex;
+    gap: 8px;
+
+    .tag {
+      height: 32px;
+      padding: 2px 12px;
+      display: flex;
+      border-radius: 50px;
+      color: var(--Green, #4A9B61);
+      align-items: center;
+      justify-content: center;
+      background-color: #D8F0DF;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 128.571%;
+      transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+
+      i {
+        font-style: normal;
+      }
+
+      &.meeting {
+        color: #E99637;
+        background-color: rgba(233, 150, 55, 0.24);
+      }
+
+      &.new {
+        color: #A228E9;
+        background: rgba(162, 40, 233, 0.16);
+      }
+    }
+  }
+}
+
+@media(min-width: 991px) {
+  .card-news {
+    &:has(.card-news__link:hover) {
+      background-color: #7c8b68;
+      border-color: transparent;
+    }
+    &:has(.card-news__link:focus-visible) {
+      background-color: #7c8b68;
+      border-color: transparent;
+    }
+    &:has(.card-news__link:active) {
+      background-color: #7c8b68;
+      border-color: transparent;
+    }
+    &__link {
+
+      &:focus-visible,
+      &:hover,
+      &:active {
+        picture {
+          opacity: 1;
+        }
+
+        img {
+          opacity: 1;
+        }
+
+        &+.card-news__info {
+          .card-news__title {
+            color: #FFF;
+          }
+
+          .card-news__desc {
+            color: #FFF;
+          }
+
+          .card-news__group-tags {
+            .tag {
+              color: #FFF;
+              background-color: #64AC0F;
+
+              &.meeting {
+                background-color: #E99637;
+              }
+
+              &.new {
+                background-color: #A228E9;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .card-news {
+    min-height: 212px;
+    &__info {
+      padding: 20px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__desc {
+      font-size: 16px;
+    }
+  }
+}

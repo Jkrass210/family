@@ -1,0 +1,38 @@
+body{
+  .tabs__nav {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    @media(max-width: 991px) {
+      gap: 8px;
+    }
+  }
+
+  .tabs__tab {
+    cursor: pointer;
+    padding: 18px 28px;
+    transition: all .25s linear;
+    border-radius: 16px;
+    background: var(--g100);
+    &:hover{
+      color: var(--white);
+      background: var(--green);
+    }
+    &.active{
+      color: var(--white);
+      background: var(--green);
+    }
+    @media(max-width: 991px) {
+      padding: 14px 20px;
+    }
+  }
+
+  .tabs__panel {
+    display: none;
+  }
+
+  .tabs__panel.active {
+    display: block;
+  }
+
+}

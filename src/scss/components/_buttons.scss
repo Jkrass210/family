@@ -1,0 +1,222 @@
+.button{
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 48px;
+  background: var(--green);
+  color: var(--white);
+  cursor: pointer;
+  outline: none;
+  border-radius: 16px;
+  &:hover{
+    background: var(--green2);
+    color: var(--white);
+  }
+}
+
+.button_gray{
+  background: var(--g200);
+  color: var(--black);
+  padding: 0 24px;
+  &:hover{
+    background: var(--g100);
+    color: var(--black);
+  }
+}
+
+.show-all {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 56px;
+  color: var(--set2-black, #3C4531);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133.333%;
+  border-radius: 12px;
+  background-color: var(--g200, #EDF0F2);
+  transition: background-color 0.4s ease-in-out;
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+  &:focus-visible, &:hover, &:active {
+    background-color: var(--g300);
+  }
+}
+
+.button-20 {
+  height: 52px;
+  width: 224px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+.button-upload-more {
+  min-width: 269px;
+  min-height: 52px;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 12px;
+  background-color: var(--g100, #F6F8FA);
+  color: var(--black2, #3C4531);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 111.111%;
+  .svg {
+    padding: 6px 5px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+  &:focus-visible,&:hover,&:active {
+    background-color: var(--g300);
+    color: var(--black2, #3C4531);
+  }
+}
+
+.button-detail {
+  min-width: 150px;
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 131.25%;
+  background-color: var(--g300, #DBE0E4);
+  transition: background-color 0.4s ease-in-out;
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+  &:focus-visible,&:hover,&:active {
+    background-color: var(--g200);
+    color: #000;
+  }
+}
+
+.button-sequence {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--white);
+  border-radius: 12px;
+  background-color: var(--Green, #4A9B61);
+  transition: border-color 0.4s ease-in-out;
+  svg {
+    fill: var(--white);
+  }
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+  &:focus-visible,&:hover,&:active {
+    border-color: var(--Green, #4A9B61);
+  }
+}
+
+.swiper-btn-type-2 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background-color: #fff;
+  backdrop-filter: blur(4.053333282470703px);
+  transition: background-color 0.4s ease-in-out;
+  svg {
+    transition: fill 0.4s ease-in-out;
+  }
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+  &:focus-visible, &:hover {
+    background-color: #4A9B61;
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
+.swiper-btn-type-1 {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  background-color: #fff;
+  border-radius: 12px;
+  transition: background-color 0.4s ease-in-out;
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  svg {
+    transition: fill 0.4s ease-in-out;
+  }
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+  &:focus-visible, &:hover {
+    background-color: #4A9B61;
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
+@media(max-width: 1400px) {
+  .button-upload-more {
+    min-width: 220px;
+    padding: 0 30px;
+    font-size: 17px;
+    line-height: 117.647%;
+  }
+  .swiper-btn-type-2 {
+    width: 32px;
+    height: 32px;
+    .icon {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .swiper-btn-type-1 {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media(max-width: 991px) {
+  .show-all {
+    padding: 0 30px;
+  }
+  .button-upload-more {
+    min-width: 100%;
+    height: 56px;
+    padding: 0 20px;
+  }
+} 

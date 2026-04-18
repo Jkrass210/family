@@ -1,0 +1,60 @@
+.progress-bar {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 60px;
+  border-radius: 50px;
+  background-color: #FFF;
+  &__percent {
+    display: flex;
+    width: 0%;
+    align-items: center;
+    justify-content: center;
+    background-color: #4A9B61;
+    animation: fillProgress 2s ease-in-out forwards;
+    .number {
+      opacity: 0;
+      color: #FFF;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 112.5%;
+      animation: showNumber 0.5s ease-in-out 2s forwards;
+    }
+  }
+}
+
+@keyframes fillProgress {
+    to {
+        width: var(--target-width, 40%);
+    }
+}
+
+@keyframes showNumber {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1400px) {
+  .progress-bar {
+    &__percent {
+      .number {
+        font-size: 18px;
+        line-height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .progress-bar {
+    height: 48px;
+    &__percent {
+      .number {
+        font-size: 16px;
+        line-height: 112.5%;
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.card-hero-detail-news {
+  position: relative;
+  min-height: 340px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.44) 0%, rgba(0, 0, 0, 0.44) 100%);
+  }
+  picture {
+    position: absolute;
+    inset: 0;
+  }
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__info {
+    padding: 24px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    .top {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  &__title {
+    color: #FFF;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &__group-tags {
+    display: flex;
+    gap: 8px;
+    .tag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 12px;
+      height: 28px;
+      color: #FFF;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      border-radius: 50px;
+      line-height: 128.571%;
+      background-color: #64AC0F;
+      &.meeting {
+        background-color: #E99637;
+      }
+    }
+  }
+  &__box-desc {
+    max-width: 561px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.8em;
+    line-height: 1.2em;
+  }
+}
+
+@media(max-width: 1400px) {
+  .card-hero-detail-news {
+    min-height: 247px;
+  }
+}
+
+@media(max-width: 991px) {
+  .card-hero-detail-news {
+    min-height: 200px;
+    &__info {
+      width: 100%;
+      .top {
+        height: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__box-desc {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.card-business-history-main {
+  display: flex;
+  gap: calc(44 / 1472 * 100%);
+  padding: 40px;
+  height: 100%;
+  position: relative;
+  min-height: 432px;
+  border-radius: 16px;
+  background-color: var(--set2-g100, #F6F8FA);
+  &__background {
+    opacity: 0.3;
+    padding-right: calc(602 / 1552 * 100%);
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    color: var(--set2-g300, #DBE0E4);
+    font-size: 256px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+  &__left {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 70px;
+  }
+  &__right {
+    width: calc(518 / 1472 * 100%);
+  }
+  &__title {
+    color: var(--set2-black, #3C4531);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--set2-black, #3C4531);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &__gallery {
+    height: 100%;
+  }
+}
+
+@media(max-width: 1400px) {
+  .card-business-history-main {
+    gap: calc(20 / 976 * 100%);
+    padding: 28px 28px 66px 28px;
+    min-height: 392px;
+    &__background {
+      padding-right: calc(420 / 976 * 100%);
+      padding-bottom: 28px;
+      font-size: 156px;
+    }
+    &__left {
+      gap: 16px;
+      padding-bottom: 43px;
+    }
+    &__right {
+      width: calc(367 / 976 * 100%);
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__desc {
+      gap: 16px;
+      font-size: 17px;
+      line-height: 125%;
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .card-business-history-main {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    min-height: 250px;
+    &__background {
+      display: none;
+    }
+    &__left {
+      padding-bottom: 0;
+      gap: 16px;
+    }
+    &__right {
+      width: 100%;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__desc {
+      gap: 12px;
+      font-size: 16px;
+      line-height: 125%;
+    }
+  }
+}

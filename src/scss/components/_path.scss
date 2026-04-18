@@ -1,0 +1,84 @@
+.path {
+  margin-bottom: 32px;
+
+  &__list {
+    display: flex;
+    gap: 4px;
+    // Добавляем ограничение по ширине
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+
+    // Для всех элементов кроме последнего
+    &:not(.last-item) {
+      flex-shrink: 0; // Не сжимаем элементы со ссылками
+    }
+
+    .svg {
+      fill: #4A9B61;
+      display: flex;
+      flex-shrink: 0; // Стрелки не сжимаются
+    }
+
+    .text {
+      color: var(--set2-black, #3C4531);
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 123.077%;
+    }
+  }
+
+  &__link {
+    color: var(--set2-text_gray, #81858B);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 123.077%;
+
+    // Убираем обрезку текста для ссылок
+    white-space: nowrap; // Только перенос отключаем
+    display: block;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      color: #4A9B61;
+    }
+  }
+
+  .last-item {
+    flex-shrink: 1;
+    min-width: 0;
+    
+    .text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .path {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 991px) {
+  .path {
+    margin-bottom: 24px;
+  }
+}

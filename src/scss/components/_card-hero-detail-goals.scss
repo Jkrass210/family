@@ -1,0 +1,66 @@
+.card-hero-detail-goals {
+  position: relative;
+
+  &__img {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 44.75%;
+    }
+
+    picture {
+      position: absolute;
+      inset: 0;
+    }
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    color: var(--white);
+    position: absolute;
+    inset: auto auto 40px 40px;
+    max-width: calc(100% - 40px - 40px);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 2.4em;
+    line-height: 1.2em;
+  }
+}
+
+@media (max-width: 1400px) {
+  .card-hero-detail-goals {
+    &__img {
+      &::before {
+        padding-top: 37.70%;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .card-hero-detail-goals {
+    &__img {
+      &::before {
+        padding-top: 87.80%;
+      }
+    }
+    &__title {
+      inset: auto auto 24px 24px;
+      max-width: calc(100% - 24px - 24px);
+    }
+  }
+}

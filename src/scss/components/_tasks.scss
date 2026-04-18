@@ -1,0 +1,28 @@
+.tasks {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .static-line-upload-more {
+    justify-content: end;
+  }
+}
+
+@media(max-width: 1400px) {
+  .tasks {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .tasks {
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  }
+}

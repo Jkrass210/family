@@ -1,0 +1,34 @@
+/* Стили для контейнеров и сеток */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 0 24px;
+  @media(max-width: 991px) {
+    padding: 0 16px;
+  }
+}
+
+/* Выравнивание элементов */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+main{
+  padding-top: 200px;
+  flex: 1 0 auto;
+  @media(max-width: 1400px) {
+    padding-top: 175px;
+  }
+  @media(max-width: 991px) {
+    padding-top: 108px;
+  }
+}

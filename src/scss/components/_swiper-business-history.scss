@@ -1,0 +1,161 @@
+.swiper-business-history {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 128px;
+
+  &_main {
+    position: relative;
+
+    .swiper-slide {
+      box-sizing: border-box;
+      height: auto;
+    }
+
+    &-group-btn {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      z-index: 2;
+      display: flex;
+      gap: 8px;
+    }
+  }
+
+  &_gallery {
+    height: 100%;
+    margin: 0 -20px;
+    padding: 0 20px;
+
+    &::before,
+    &::after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      height: 100%;
+      width: 20px;
+      background-color: var(--set2-g100, #F6F8FA);
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      top: 0;
+      right: 0;
+    }
+
+    .swiper-slide {
+      box-sizing: border-box;
+      height: auto;
+    }
+
+    &-group-btn {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &_preview {
+    .swiper-slide {
+      box-sizing: border-box;
+      height: auto;
+
+      &.swiper-slide-thumb-active {
+        .card-business-history-preview {
+          .active-line {
+            opacity: 1;
+            overflow: visible;
+            transform: none;
+
+            &::before {
+              opacity: 1;
+              overflow: visible;
+            }
+          }
+
+          &__title {
+            color: var(--white);
+          }
+
+          &__desc {
+            color: var(--white);
+          }
+
+          background-color: var(--Green, #4A9B61);
+          border-color: var(--Green, #4A9B61);
+        }
+      }
+    }
+
+  }
+}
+
+@media(max-width: 1400px) {
+  .swiper-business-history {
+    margin: 0 -24px;
+    padding: 0 24px;
+    gap: 67px;
+
+    &_main {
+      &-group-btn {
+        bottom: 37px;
+        left: 28px;
+      }
+    }
+
+    &_gallery {
+      margin: 0;
+      padding: 0;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      &-group-btn {
+        inset: 16px 16px auto auto;
+        gap: 4px;
+      }
+    }
+
+    &_preview {
+      margin: 0 -24px;
+      padding: 0 24px;
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .swiper-business-history {
+    margin: 0 -16x;
+    padding: 0 16x;
+    flex-direction: column-reverse;
+    gap: 16px;
+    &_main {
+      &-group-btn {
+        display: none;
+      }
+    }
+    &_gallery {
+      padding: 0 20px;
+      margin: 0 -20px;
+      &-group-btn {
+        display: none;
+      }
+    }
+    &_preview {
+      margin: 0 -16px;
+      padding: 0 16px;
+      .swiper-slide {
+        width: auto;
+      }
+    }
+  }
+}

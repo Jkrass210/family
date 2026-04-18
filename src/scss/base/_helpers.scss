@@ -1,0 +1,147 @@
+@use "variables" as vars;
+
+// === Font sizes ===
+@each $size, $values in vars.$font-sizes {
+  .size-#{$size} {
+    font-size: #{map-get($values, xl)}px;
+
+    @media (max-width: map-get(vars.$breakpoints, "xl")) {
+      font-size: #{map-get($values, md)}px;
+    }
+
+    @media (max-width: map-get(vars.$breakpoints, "md")) {
+      font-size: #{map-get($values, sm)}px;
+    }
+  }
+}
+
+// === Paddings ===
+@each $i, $values in vars.$paddings {
+  // Генерация классов для конкретной стороны
+  @each $short, $side in vars.$sides {
+    .p#{$short}-#{$i} {
+      padding#{"-#{$side}"}: #{map-get($values, xl)}px;
+
+      @media (max-width: map-get(vars.$breakpoints, "xl")) {
+        padding#{"-#{$side}"}: #{map-get($values, md)}px;
+      }
+
+      @media (max-width: map-get(vars.$breakpoints, "md")) {
+        padding#{"-#{$side}"}: #{map-get($values, sm)}px;
+      }
+    }
+  }
+
+  // Универсальный отступ со всех сторон
+  .p-#{$i} {
+    padding: #{map-get($values, xl)}px;
+
+    @media (max-width: map-get(vars.$breakpoints, "xl")) {
+      padding: #{map-get($values, md)}px;
+    }
+
+    @media (max-width: map-get(vars.$breakpoints, "md")) {
+      padding: #{map-get($values, sm)}px;
+    }
+  }
+}
+
+@each $i, $values in vars.$paddings {
+  @each $short, $side in vars.$sides {
+    .m#{$short}-#{$i} {
+      margin#{"-#{$side}"}: #{map-get($values, xl)}px;
+
+      @media (max-width: map-get(vars.$breakpoints, "xl")) {
+        margin#{"-#{$side}"}: #{map-get($values, md)}px;
+      }
+
+      @media (max-width: map-get(vars.$breakpoints, "md")) {
+        margin#{"-#{$side}"}: #{map-get($values, sm)}px;
+      }
+    }
+  }
+}
+
+// === Heights ===
+
+.h-60 {
+  height: 60px;
+  @media (max-width: map-get(vars.$breakpoints, "xl")) { height: 56px; }
+  @media (max-width: map-get(vars.$breakpoints, "md")) { height: 48px; }
+}
+
+.flex{
+  display: flex;
+}
+
+.inline-flex{
+  display: inline-flex;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.align-start{
+  align-items: flex-start;
+}
+
+.align-end{
+  align-items: flex-end;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.w-full{
+  width: 100%;
+}
+
+.hidden-desktop{
+  @media(min-width: 991px) {
+    display: none !important;
+  }
+}
+
+.hidden-mobile{
+  @media(max-width: 991px) {
+    display: none !important;
+  }
+}
+
+.fw-300{
+  font-weight: 300;
+}
+
+.fw-400{
+  font-weight: 400;
+}
+
+.fw-500{
+  font-weight: 500;
+}
+
+.fw-600{
+  font-weight: 600;
+}
+
+.fw-700{
+  font-weight: 700;
+}
+
+.color-gray{
+  color: var(--gray);
+}
+
+.hidden-title{
+  display: none;
+}

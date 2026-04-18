@@ -1,0 +1,38 @@
+.photo-gallery {
+  &__title {
+    margin-bottom: 24px;
+    color: var(--set2-black, #3C4531);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+@media(max-width: 1400px) {
+  .photo-gallery {
+    &__swiper {
+      margin: 0 -24px;
+
+      .swiper-photo-gallery {
+        padding: 0 24px;
+      }
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .photo-gallery {
+    &__title {
+      margin-bottom: 16px;
+      font-size: 24px;
+    }
+    &__swiper {
+      margin: 0 -16px;
+
+      .swiper-photo-gallery {
+        padding: 0 16px;
+      }
+    }
+  }
+}

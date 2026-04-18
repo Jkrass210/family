@@ -1,0 +1,549 @@
+@@include('parts/head.html')
+
+@@include('parts/header.html')
+
+<main>
+  @@include('parts/path-library.html')
+
+  <div class="static-line-title-page">
+    <div class="container">
+      <h2 class="static-title-page size-36">
+        Семейная библиотека
+      </h2>
+    </div>
+  </div>
+
+  <section class="library">
+    <div class="container">
+      <div class="library__line-filter">
+        <div class="drop-down-tab">
+          <button class="drop-down-tab__btn">
+            <span class="text">Показать:<i>все</i></span>
+            <span class="svg">
+              <svg width="8" height="4" viewBox="0 0 8 4">
+                <use xlink:href="images/sprite.svg#icon-chevron-up"></use>
+              </svg>
+            </span>
+          </button>
+          <div class="drop-down-tab__box">
+            <a href="#all-goals" class="drop-down-tab__box-btn btn-tab disabled">
+              все
+            </a>
+            <a href="#2025" class="drop-down-tab__box-btn btn-tab">
+              Бизнес и финансы
+            </a>
+            <a href="#2026" class="drop-down-tab__box-btn btn-tab">
+              Инвестирование и кредиты
+            </a>
+            <a href="#2027" class="drop-down-tab__box-btn btn-tab">
+              Семья и интеллект
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="library__content">
+        <div class="library__top">
+          <article class="card-read">
+            <div class="card-read__top">
+              <div class="card-read__img">
+                <img src="images/avatar.jpg" alt="avatar">
+              </div>
+              <div class="card-read__info">
+                <h3 class="card-read__title">
+                  Андрей
+                </h3>
+                <p class="desc">
+                  Краткая подпись о человеке
+                </p>
+              </div>
+            </div>
+            <div class="card-read__middle">
+              <p class="desc">
+                Прочтено по плану
+              </p>
+              <div class="progress-bar">
+                <span class="progress-bar__percent" style="--target-width: 60%;">
+                  <span class="number">6 из 10</span>
+                </span>
+              </div>
+            </div>
+            <div class="card-read__bottom">
+              <p class="desc">
+                Уже прочитано:
+              </p>
+              <div class="card-read__box-list">
+                <ol class="card-read__list">
+                  <li>
+                    <div class="card-read__item">
+                      <h4 class="essay">«Политика»</h4>
+                      <span class="name">Аристотель</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card-read__item">
+                      <h4 class="essay">«Структура разума: теория множественного интеллекта»</h4>
+                      <span class="name">Говард Гарднер</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card-read__item">
+                      <h4 class="essay">«Поколения наследников»</h4>
+                      <span class="name">Поколения наследников</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card-read__item">
+                      <h4 class="essay">«Поколения наследников»</h4>
+                      <span class="name">Поколения наследников</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card-read__item">
+                      <h4 class="essay">«Поколения наследников»</h4>
+                      <span class="name">Поколения наследников</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card-read__item">
+                      <h4 class="essay">«Поколения наследников»</h4>
+                      <span class="name">Поколения наследников</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card-read__item">
+                      <h4 class="essay">«Поколения наследников»</h4>
+                      <span class="name">Поколения наследников</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card-read__item">
+                      <h4 class="essay">«Поколения наследников»</h4>
+                      <span class="name">Поколения наследников</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card-read__item">
+                      <h4 class="essay">«Поколения наследников»</h4>
+                      <span class="name">Поколения наследников</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="card-read__item">
+                      <h4 class="essay">«Поколения наследников»</h4>
+                      <span class="name">Поколения наследников</span>
+                    </div>
+                  </li>
+                </ol>
+                <div class="card-read__box-btn">
+                  <button class="show-all card-read__list-open">
+                    <span class="text">Показать все</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="library__bottom">
+          <ul class="library__list">
+            <li class="library__item">
+              <article class="card-book">
+                <div class="card-book__img">
+                  <img src="images/book/1.jpg" alt="img">
+                </div>
+                <div class="card-book__info">
+                  <div class="card-book__line-top">
+                    <h3 class="card-book__title">
+                      «Политика»
+                    </h3>
+                    <p class="card-book__name">
+                      Аристотель
+                    </p>
+                  </div>
+                  <div class="card-book__line-middle">
+                    <span class="card-book__annot">
+                      Аннотация:
+                    </span>
+                    <p>
+                      «Средний класс», «экономика», «семья как ячейка государства», «политика», «конституция»,
+                      «гражданский долг» - мы произносим эти слова и выражения, даже не зная, что самим
+                      их существованием обязаны Аристотелю, гениальному мыслителю, который впервые ввёл их в оборот
+                      в своём произведении «Политика», где и изобрёл социальную и политическую философию, впервые
+                      в истории выделив изучение общественных отношений в самостоятельную науку.
+                    </p>
+                    <div class="card-book__btn-line">
+                      <a href="#" class="button button-20">
+                        Читать
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-book__line-bottom">
+
+                    <div class="card-book__group-read group-read">
+                      <span class="group-read__title">
+                        Уже прочитали:
+                      </span>
+
+                      <ul class="group-read__list">
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="library__item">
+              <article class="card-book">
+                <div class="card-book__img">
+                  <img src="images/book/2.png" alt="img">
+                </div>
+                <div class="card-book__info">
+                  <div class="card-book__line-top">
+                    <h3 class="card-book__title">
+                      «Политика»
+                    </h3>
+                    <p class="card-book__name">
+                      Аристотель
+                    </p>
+                  </div>
+                  <div class="card-book__line-middle">
+                    <span class="card-book__annot">
+                      Аннотация:
+                    </span>
+                    <p>
+                      «Средний класс», «экономика», «семья как ячейка государства», «политика», «конституция»,
+                      «гражданский долг» - мы произносим эти слова и выражения, даже не зная, что самим
+                      их существованием обязаны Аристотелю, гениальному мыслителю, который впервые ввёл их в оборот
+                      в своём произведении «Политика», где и изобрёл социальную и политическую философию, впервые
+                      в истории выделив изучение общественных отношений в самостоятельную науку.
+                    </p>
+                    <div class="card-book__btn-line">
+                      <a href="#" class="button button-20">
+                        Читать
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-book__line-bottom">
+
+                    <div class="card-book__group-read group-read">
+                      <span class="group-read__title">
+                        Уже прочитали:
+                      </span>
+
+                      <ul class="group-read__list">
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="library__item">
+              <article class="card-book">
+                <div class="card-book__img"></div>
+                <div class="card-book__info">
+                  <div class="card-book__line-top">
+                    <h3 class="card-book__title">
+                      «Политика»
+                    </h3>
+                    <p class="card-book__name">
+                      Аристотель
+                    </p>
+                  </div>
+                  <div class="card-book__line-middle">
+                    <span class="card-book__annot">
+                      Аннотация:
+                    </span>
+                    <p>
+                      «Средний класс», «экономика», «семья как ячейка государства», «политика», «конституция»,
+                      «гражданский долг» - мы произносим эти слова и выражения, даже не зная, что самим
+                      их существованием обязаны Аристотелю, гениальному мыслителю, который впервые ввёл их в оборот
+                      в своём произведении «Политика», где и изобрёл социальную и политическую философию, впервые
+                      в истории выделив изучение общественных отношений в самостоятельную науку.
+                    </p>
+                    <div class="card-book__btn-line">
+                      <a href="#" class="button button-20">
+                        Читать
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-book__line-bottom">
+
+                    <div class="card-book__group-read group-read">
+                      <span class="group-read__title">
+                        Уже прочитали:
+                      </span>
+
+                      <ul class="group-read__list">
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="library__item">
+              <article class="card-book">
+                <div class="card-book__img"></div>
+                <div class="card-book__info">
+                  <div class="card-book__line-top">
+                    <h3 class="card-book__title">
+                      «Политика»
+                    </h3>
+                    <p class="card-book__name">
+                      Аристотель
+                    </p>
+                  </div>
+                  <div class="card-book__line-middle">
+                    <span class="card-book__annot">
+                      Аннотация:
+                    </span>
+                    <p>
+                      «Средний класс», «экономика», «семья как ячейка государства», «политика», «конституция»,
+                      «гражданский долг» - мы произносим эти слова и выражения, даже не зная, что самим
+                      их существованием обязаны Аристотелю, гениальному мыслителю, который впервые ввёл их в оборот
+                      в своём произведении «Политика», где и изобрёл социальную и политическую философию, впервые
+                      в истории выделив изучение общественных отношений в самостоятельную науку.
+                    </p>
+                    <div class="card-book__btn-line">
+                      <a href="#" class="button button-20">
+                        Читать
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-book__line-bottom">
+
+                    <div class="card-book__group-read group-read">
+                      <span class="group-read__title">
+                        Уже прочитали:
+                      </span>
+
+                      <ul class="group-read__list">
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="library__item">
+              <article class="card-book">
+                <div class="card-book__img"></div>
+                <div class="card-book__info">
+                  <div class="card-book__line-top">
+                    <h3 class="card-book__title">
+                      «Политика»
+                    </h3>
+                    <p class="card-book__name">
+                      Аристотель
+                    </p>
+                  </div>
+                  <div class="card-book__line-middle">
+                    <span class="card-book__annot">
+                      Аннотация:
+                    </span>
+                    <p>
+                      «Средний класс», «экономика», «семья как ячейка государства», «политика», «конституция»,
+                      «гражданский долг» - мы произносим эти слова и выражения, даже не зная, что самим
+                      их существованием обязаны Аристотелю, гениальному мыслителю, который впервые ввёл их в оборот
+                      в своём произведении «Политика», где и изобрёл социальную и политическую философию, впервые
+                      в истории выделив изучение общественных отношений в самостоятельную науку.
+                    </p>
+                    <div class="card-book__btn-line">
+                      <a href="#" class="button button-20">
+                        Читать
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-book__line-bottom">
+
+                    <div class="card-book__group-read group-read">
+                      <span class="group-read__title">
+                        Уже прочитали:
+                      </span>
+
+                      <ul class="group-read__list">
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="library__item">
+              <article class="card-book">
+                <div class="card-book__img"></div>
+                <div class="card-book__info">
+                  <div class="card-book__line-top">
+                    <h3 class="card-book__title">
+                      «Политика»
+                    </h3>
+                    <p class="card-book__name">
+                      Аристотель
+                    </p>
+                  </div>
+                  <div class="card-book__line-middle">
+                    <span class="card-book__annot">
+                      Аннотация:
+                    </span>
+                    <p>
+                      «Средний класс», «экономика», «семья как ячейка государства», «политика», «конституция»,
+                      «гражданский долг» - мы произносим эти слова и выражения, даже не зная, что самим
+                      их существованием обязаны Аристотелю, гениальному мыслителю, который впервые ввёл их в оборот
+                      в своём произведении «Политика», где и изобрёл социальную и политическую философию, впервые
+                      в истории выделив изучение общественных отношений в самостоятельную науку.
+                    </p>
+                    <div class="card-book__btn-line">
+                      <a href="#" class="button button-20">
+                        Читать
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-book__line-bottom">
+
+                    <div class="card-book__group-read group-read">
+                      <span class="group-read__title">
+                        Уже прочитали:
+                      </span>
+
+                      <ul class="group-read__list">
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="library__item">
+              <article class="card-book">
+                <div class="card-book__img"></div>
+                <div class="card-book__info">
+                  <div class="card-book__line-top">
+                    <h3 class="card-book__title">
+                      «Политика»
+                    </h3>
+                    <p class="card-book__name">
+                      Аристотель
+                    </p>
+                  </div>
+                  <div class="card-book__line-middle">
+                    <span class="card-book__annot">
+                      Аннотация:
+                    </span>
+                    <p>
+                      «Средний класс», «экономика», «семья как ячейка государства», «политика», «конституция»,
+                      «гражданский долг» - мы произносим эти слова и выражения, даже не зная, что самим
+                      их существованием обязаны Аристотелю, гениальному мыслителю, который впервые ввёл их в оборот
+                      в своём произведении «Политика», где и изобрёл социальную и политическую философию, впервые
+                      в истории выделив изучение общественных отношений в самостоятельную науку.
+                    </p>
+                    <div class="card-book__btn-line">
+                      <a href="#" class="button button-20">
+                        Читать
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-book__line-bottom">
+
+                    <div class="card-book__group-read group-read">
+                      <span class="group-read__title">
+                        Уже прочитали:
+                      </span>
+
+                      <ul class="group-read__list">
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                        <li>
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <div class="static-line-upload-more">
+            <a href="#" class="button-upload-more">
+              <span class="text">
+                Загрузить еще
+              </span>
+              <span class="svg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path
+                    d="M10.7002 5.69922H5.7002M5.7002 5.69922H0.700195M5.7002 5.69922V0.699219M5.7002 5.69922V10.6992"
+                    stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+
+            <div class="static-group-btn-number">
+              <a href="#" class="static-btn-number active">1</a>
+              <a href="#" class="static-btn-number">2</a>
+              <a href="#" class="static-btn-number">3</a>
+              <a href="#" class="static-btn-number">...</a>
+              <a href="#" class="static-btn-number">14</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include('parts/footer.html')
+
+@@include('parts/script.html')

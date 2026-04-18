@@ -1,0 +1,74 @@
+.card-progress-detail-goals {
+  padding: 32px;
+  position: sticky;
+  top: 160px;
+  border-radius: 16px;
+  background-color: var(--set2-g100, #F6F8FA);
+  &__title {
+    margin-bottom: 16px;
+    color: var(--set2-black, #3C4531);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  &__desc {
+    margin-bottom: 20px;
+    color: var(--set2-black, #3C4531);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 131.25%;
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    p {
+      color: #000;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .card-progress-detail-goals {
+    padding: 28px;
+    position: static;
+    &__desc {
+      margin-bottom: 24px;
+    }
+    &__group {
+      gap: 12px;
+      p {
+        font-size: 17px;
+        line-height: 105.882%;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .card-progress-detail-goals {
+    padding: 20px;
+    &__title {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+    &__desc {
+      margin-bottom: 16px;
+      font-size: 14px;
+      line-height: normal;
+    }
+    &__group {
+      gap: 13px;
+      p {
+        font-size: 16px;
+        line-height: 112.5%;
+      }
+    }
+  }
+}

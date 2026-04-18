@@ -1,0 +1,121 @@
+.catd-info-tab {
+  &__title {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--set2-black, #3C4531);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 133.333%;
+    .time {
+      padding: 6px 16px;
+      border-radius: 50px;
+      color: var(--set2-black, #3C4531);
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 133.333%;
+      background: var(--set2-g300, #DBE0E4);
+    }
+  }
+  &__desc {
+    margin-bottom: 24px;
+    color: var(--set2-black, #3C4531);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 123.529%;
+  }
+  &__box-swiper {
+    position: relative;
+    &:has(.swiper-slide:first-child.swiper-slide-active) {
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        content: '';
+        display: inline-block;
+        width: 29px;
+        height: 100%;
+        flex-shrink: 0;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+      }
+    }
+    .swiper-arrow {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      background: var(--set2-g200, #EDF0F2);
+      stroke: var(--set2-black, #3C4531);
+      z-index: 2;
+
+      &.swiper-button-disabled {
+        opacity: 0;
+      }
+
+      &:focus-visible,
+      &:hover,
+      &:active {
+        background: var(--set2-g200, #EDF0F2);
+      }
+
+      &-prev {
+        left: 12px;
+      }
+
+      &-next {
+        right: 12px;
+      }
+    }
+  }
+  &__box-img {
+    display: flex;
+  }
+  &__link {
+    display: flex;
+  }
+}
+
+@media (max-width: 1400px) {
+  .catd-info-tab {
+    &__box-swiper {
+      padding-right: 34px;
+      &:has(.swiper-slide:first-child.swiper-slide-active) {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .catd-info-tab {
+    &__title {
+      margin-bottom: 16px;
+      align-items: start;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 17px;
+      line-height: 141.176%;
+    }
+    &__desc {
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: normal;
+    }
+    &__box-swiper {
+      padding: 0;
+      margin: 0 -16px 0 0;
+      .swiper-arrow {
+        display: none;
+      }
+    }
+  }
+}

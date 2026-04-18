@@ -1,0 +1,43 @@
+.mission {
+  &__content {
+    display: flex;
+    gap: 24px;
+  }
+  &__left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  &__right {
+    width: calc(500 / 1552 * 100%);
+  }
+}
+
+@media(max-width: 1400px) {
+  .mission {
+    &__content {
+      gap: 20px;
+    }
+    &__left {
+      gap: 32px;
+    }
+    &__right {
+      width: calc(348 / 976 * 100%);
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .mission {
+    &__content {
+      flex-direction: column-reverse;
+    }
+    &__left {
+      gap: 20px;
+    }
+    &__right {
+      width: 100%;
+    }
+  }
+}

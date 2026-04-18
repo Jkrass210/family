@@ -1,0 +1,115 @@
+.card-mission {
+  padding: 28px;
+  position: sticky;
+  top: 160px;
+  border-radius: 12px;
+  border: 4px solid #F7FBF3;
+  background: #FFF;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  &__title {
+    color: var(--set2-black, #3C4531);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &__list {
+    counter-reset: list-counter;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-right: -4px;
+    max-height: 550px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+        
+    &::-webkit-scrollbar-track {
+      border-radius: 1000px;
+      background-color: transparent;
+    }
+        
+    &::-webkit-scrollbar-thumb {
+      border-radius: 1000px;
+      background-color: var(--green2);
+    }
+
+    li {
+      counter-increment: list-counter;
+      display: flex;
+      align-items: start;
+      gap: 12px;
+      color: var(--set2-black, #3C4531);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 133.333%;
+      padding-right: 4px;
+      p {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        span {
+          color: var(--set2-text_gray, #81858B);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+      &::before {
+        content: counter(list-counter);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 24px;
+        min-width: 24px;
+        background-color: var(--Green, #4A9B61);
+        color: #FFF;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        border-radius: 100%;
+      }
+    }
+  }
+}
+
+@media(max-width: 1400px) {
+  .card-mission {
+    padding: 20px;
+    top: 135px;
+    gap: 16px;
+    &__title {
+      font-size: 18px;
+    }
+    &__list {
+      gap: 16px;
+      li {
+        font-size: 16px;
+        line-height: 125%;
+        p {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .card-mission {
+    position: static;
+    padding: 12px;
+    &__title {
+      font-size: 17px;
+    }
+  }
+}

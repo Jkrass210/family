@@ -1,0 +1,60 @@
+.drop-down-form-1 {
+  position: relative;
+  &__btn {
+    position: absolute;
+    inset: 24px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 28px;
+    &.active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    .svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      fill: #81858B;
+      svg {
+        transition: transform .4s ease-in-out;
+      }
+    }
+  }
+  &__box {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--g300, #DBE0E4);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04), 0 8px 16px 0 rgba(0, 0, 0, 0.08);
+    transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__pount {
+    cursor: pointer;
+    padding: 18px 20px;
+    transition: background-color 0.4s ease-in-out;
+    &.disabled {
+      pointer-events: none;
+      background-color: var(--g200);
+      background-image: url(../images/form-disabled.svg);
+      background-repeat: no-repeat;
+      background-size: 24px 24px;
+      background-position: center right 20px;
+    }
+    &:hover,&:active {
+      background-color: var(--g300);
+    }
+  }
+}

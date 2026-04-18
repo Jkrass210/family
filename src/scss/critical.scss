@@ -1,0 +1,17 @@
+//сброс стилей
+@use "base/reset";
+
+//шрифты
+@use "base/fonts";
+
+@use "base/root";
+
+//Базовые стили
+@use "base/base";
+
+//Общии стили
+@use "base/layout";
+
+@use "base/helpers";
+
+@use "components/main-critical";

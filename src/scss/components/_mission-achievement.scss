@@ -1,0 +1,118 @@
+.mission-achievement {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &.show-animation {
+    .progress-bar {
+      &__percent {
+      animation: fillProgress 2s ease-in-out forwards;
+      .number {
+        animation: showNumber 0.5s ease-in-out 2s forwards;
+      }
+    }
+    }
+  }
+  &__title {
+    color: var(--set2-black, #3C4531);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .card-read {
+    height: 100%;
+    padding: 32px;
+    position: static;
+    justify-content: space-between;
+    border-radius: 12px;
+    min-height: 222px;
+    gap: 16px;
+  }
+
+  .progress-bar {
+    border-radius: 8px;
+    background-color: var(--set2-g300, #DBE0E4);
+    &__percent {
+      border-radius: 12px;
+      //animation: fillProgress 2s ease-in-out forwards;
+      animation: none;
+      .number {
+        //animation: showNumber 0.5s ease-in-out 2s forwards;
+        animation: none;
+      }
+    }
+  }
+}
+
+@media(max-width: 1400px) {
+  .mission-achievement {
+    &__title {
+      font-size: 20px;
+    }
+    &__list {
+      gap: 16px;
+    }
+    .card-read {
+      padding: 20px;
+      min-height: 194px;
+      gap: 12px;
+      &__top {
+        gap: 14px;
+      }
+      &__img {
+        width: 56px;
+        min-width: 56px;
+        height: 56px;
+      }
+      &__info {
+        gap: 4px;
+      }
+      &__title {
+        font-size: 16px;
+        line-height: 125%;
+      }
+      &__middle {
+        gap: 24px;
+        .desc {
+          font-size: 14px;
+          line-height: 128.571%;
+        }
+      }
+    }
+
+    .progress-bar {
+      height: 44px;
+      &__percent {
+        .number {
+          font-size: 14px;
+          line-height: 128.571%;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .mission-achievement {
+    gap: 12px;
+    &__title {
+      font-size: 18px;
+    }
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .card-read {
+      min-height: 186px;
+      &__middle {
+        gap: 16px;
+      }
+    }
+  }
+}

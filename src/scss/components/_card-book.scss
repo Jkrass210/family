@@ -1,0 +1,248 @@
+.card-book {
+  padding: 36px;
+  border-radius: 16px;
+  background-color: var(--g100, #F6F8FA);
+  display: flex;
+  align-items: start;
+  gap: 28px;
+
+  &__img {
+    border-radius: 16px;
+    overflow: hidden;
+    width: calc(196 / 1086 * 100%);
+    position: relative;
+    background-image: url(../images/book/static.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 156.7%;
+    }
+
+    picture {
+      border-radius: 16px;
+      position: absolute;
+      inset: 0;
+    }
+
+    img {
+      border-radius: 16px;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__line-top {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__title {
+    color: var(--black, #3C4531);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__name {
+    color: var(--gray, #81858B);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+  }
+
+  &__line-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    p {
+      color: var(--black2, #3C4531);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 131.25%;
+    }
+  }
+
+  &__annot {
+    color: var(--gray, #81858B);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 128.571%;
+  }
+
+  &__btn-line {
+    padding-top: 22px;
+  }
+
+  &__line-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .group-read {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &__title {
+      color: var(--gray, #81858B);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 128.571%;
+    }
+
+    &__list {
+      display: flex;
+
+      li {
+        margin: 0 0 0 -18px;
+        width: 52px;
+        min-width: 52px;
+        height: 52px;
+        border-radius: 100%;
+        overflow: hidden;
+        border: 4px solid var(--g100, #F6F8FA);
+
+        &:first-child {
+          margin: 0 0 0 -4px;
+        }
+
+        img {
+          border-radius: 100%;
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1400px) {
+  .card-book {
+    padding: 24px;
+    gap: 16px;
+
+    &__img {
+      width: calc(129 / 594 * 100%);
+
+      &::before {
+        padding-top: 155%;
+      }
+    }
+
+    &__info {
+      gap: 8px;
+    }
+
+    &__line-top {
+      gap: 2px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__name {
+      font-size: 16px;
+      line-height: 112.5%;
+    }
+
+    &__line-middle {
+      gap: 4px;
+
+      p {
+        font-size: 14px;
+        line-height: 128.571%;
+      }
+    }
+
+    &__annot {
+      font-size: 13px;
+      line-height: normal;
+    }
+
+    &__btn-line {
+      padding-top: 20px;
+
+      .button-20 {
+        height: 44px;
+        width: 183px;
+      }
+    }
+
+    &__line-bottom {
+      padding-top: 4px;
+      gap: 4px;
+    }
+
+    .group-read {
+      gap: 0;
+      &__title {
+        font-size: 13px;
+        line-height: 138.462%;
+      }
+      &__list {
+        li {
+          margin: 0 0 0 -12px;
+          width: 40px;
+          min-width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .card-book {
+    flex-direction: column;
+    align-items: center;
+    &__img {
+      width: 100%;
+      height: 200px;
+      max-height: 200px;
+      background-image: url(../images/book/non-foto.svg);
+      background-size: 48px 48px;
+      background-color: var(--g200, #EDF0F2);
+      &:has(img) {
+        background-color: transparent;
+      }
+
+      &::before {
+        display: none;
+      }
+      picture {
+        position: static;
+      }
+      img {
+        position: static;
+        height: 100%;
+        object-fit: contain;
+        
+      }
+    }
+  }
+}
